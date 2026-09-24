@@ -1,691 +1,429 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>FOIRE AUX QUESTIONS DÉPARTEMENT DE PSYCHOLOGIE</title><style>
-/* cspell:disable-file */
-/* webkit printing magic: print all background colors */
-html {
-	-webkit-print-color-adjust: exact;
-}
-* {
-	box-sizing: border-box;
-	-webkit-print-color-adjust: exact;
-}
-
-html,
-body {
-	margin: 0;
-	padding: 0;
-}
-@media only screen {
-	body {
-		margin: 2em auto;
-		max-width: 900px;
-		color: rgb(55, 53, 47);
-	}
-}
-
-body {
-	line-height: 1.5;
-	white-space: pre-wrap;
-}
-
-a,
-a.visited {
-	color: inherit;
-	text-decoration: underline;
-}
-
-.pdf-relative-link-path {
-	font-size: 80%;
-	color: #444;
-}
-
-h1,
-h2,
-h3 {
-	letter-spacing: -0.01em;
-	line-height: 1.2;
-	font-weight: 600;
-	margin-bottom: 0;
-}
-
-.page-title {
-	font-size: 2.5rem;
-	font-weight: 700;
-	margin-top: 0;
-	margin-bottom: 0.75em;
-}
-
-h1 {
-	font-size: 1.875rem;
-	margin-top: 1.875rem;
-}
-
-h2 {
-	font-size: 1.5rem;
-	margin-top: 1.5rem;
-}
-
-h3 {
-	font-size: 1.25rem;
-	margin-top: 1.25rem;
-}
-
-.source {
-	border: 1px solid #ddd;
-	border-radius: 3px;
-	padding: 1.5em;
-	word-break: break-all;
-}
-
-.callout {
-	border-radius: 3px;
-	padding: 1rem;
-}
-
-figure {
-	margin: 1.25em 0;
-	page-break-inside: avoid;
-}
-
-figcaption {
-	opacity: 0.5;
-	font-size: 85%;
-	margin-top: 0.5em;
-}
-
-mark {
-	background-color: transparent;
-}
-
-.indented {
-	padding-left: 1.5em;
-}
-
-hr {
-	background: transparent;
-	display: block;
-	width: 100%;
-	height: 1px;
-	visibility: visible;
-	border: none;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
-}
-
-img {
-	max-width: 100%;
-}
-
-@media only print {
-	img {
-		max-height: 100vh;
-		object-fit: contain;
-	}
-}
-
-@page {
-	margin: 1in;
-}
-
-.collection-content {
-	font-size: 0.875rem;
-}
-
-.column-list {
-	display: flex;
-	justify-content: space-between;
-}
-
-.column {
-	padding: 0 1em;
-}
-
-.column:first-child {
-	padding-left: 0;
-}
-
-.column:last-child {
-	padding-right: 0;
-}
-
-.table_of_contents-item {
-	display: block;
-	font-size: 0.875rem;
-	line-height: 1.3;
-	padding: 0.125rem;
-}
-
-.table_of_contents-indent-1 {
-	margin-left: 1.5rem;
-}
-
-.table_of_contents-indent-2 {
-	margin-left: 3rem;
-}
-
-.table_of_contents-indent-3 {
-	margin-left: 4.5rem;
-}
-
-.table_of_contents-link {
-	text-decoration: none;
-	opacity: 0.7;
-	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
-}
-
-table,
-th,
-td {
-	border: 1px solid rgba(55, 53, 47, 0.09);
-	border-collapse: collapse;
-}
-
-table {
-	border-left: none;
-	border-right: none;
-}
-
-th,
-td {
-	font-weight: normal;
-	padding: 0.25em 0.5em;
-	line-height: 1.5;
-	min-height: 1.5em;
-	text-align: left;
-}
-
-th {
-	color: rgba(55, 53, 47, 0.6);
-}
-
-ol,
-ul {
-	margin: 0;
-	margin-block-start: 0.6em;
-	margin-block-end: 0.6em;
-}
-
-li > ol:first-child,
-li > ul:first-child {
-	margin-block-start: 0.6em;
-}
-
-ul > li {
-	list-style: disc;
-}
-
-ul.to-do-list {
-	padding-inline-start: 0;
-}
-
-ul.to-do-list > li {
-	list-style: none;
-}
-
-.to-do-children-checked {
-	text-decoration: line-through;
-	opacity: 0.375;
-}
-
-ul.toggle > li {
-	list-style: none;
-}
-
-ul {
-	padding-inline-start: 1.7em;
-}
-
-ul > li {
-	padding-left: 0.1em;
-}
-
-ol {
-	padding-inline-start: 1.6em;
-}
-
-ol > li {
-	padding-left: 0.2em;
-}
-
-.mono ol {
-	padding-inline-start: 2em;
-}
-
-.mono ol > li {
-	text-indent: -0.4em;
-}
-
-.toggle {
-	padding-inline-start: 0em;
-	list-style-type: none;
-}
-
-/* Indent toggle children */
-.toggle > li > details {
-	padding-left: 1.7em;
-}
-
-.toggle > li > details > summary {
-	margin-left: -1.1em;
-}
-
-.selected-value {
-	display: inline-block;
-	padding: 0 0.5em;
-	background: rgba(206, 205, 202, 0.5);
-	border-radius: 3px;
-	margin-right: 0.5em;
-	margin-top: 0.3em;
-	margin-bottom: 0.3em;
-	white-space: nowrap;
-}
-
-.collection-title {
-	display: inline-block;
-	margin-right: 1em;
-}
-
-.page-description {
-	margin-bottom: 2em;
-}
-
-.simple-table {
-	margin-top: 1em;
-	font-size: 0.875rem;
-	empty-cells: show;
-}
-.simple-table td {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table th {
-	height: 29px;
-	min-width: 120px;
-}
-
-.simple-table-header-color {
-	background: rgb(247, 246, 243);
-	color: black;
-}
-.simple-table-header {
-	font-weight: 500;
-}
-
-time {
-	opacity: 0.5;
-}
-
-.icon {
-	display: inline-block;
-	max-width: 1.2em;
-	max-height: 1.2em;
-	text-decoration: none;
-	vertical-align: text-bottom;
-	margin-right: 0.5em;
-}
-
-img.icon {
-	border-radius: 3px;
-}
-
-.user-icon {
-	width: 1.5em;
-	height: 1.5em;
-	border-radius: 100%;
-	margin-right: 0.5rem;
-}
-
-.user-icon-inner {
-	font-size: 0.8em;
-}
-
-.text-icon {
-	border: 1px solid #000;
-	text-align: center;
-}
-
-.page-cover-image {
-	display: block;
-	object-fit: cover;
-	width: 100%;
-	max-height: 30vh;
-}
-
-.page-header-icon {
-	font-size: 3rem;
-	margin-bottom: 1rem;
-}
-
-.page-header-icon-with-cover {
-	margin-top: -0.72em;
-	margin-left: 0.07em;
-}
-
-.page-header-icon img {
-	border-radius: 3px;
-}
-
-.link-to-page {
-	margin: 1em 0;
-	padding: 0;
-	border: none;
-	font-weight: 500;
-}
-
-p > .user {
-	opacity: 0.5;
-}
-
-td > .user,
-td > time {
-	white-space: nowrap;
-}
-
-input[type="checkbox"] {
-	transform: scale(1.5);
-	margin-right: 0.6em;
-	vertical-align: middle;
-}
-
-p {
-	margin-top: 0.5em;
-	margin-bottom: 0.5em;
-}
-
-.image {
-	border: none;
-	margin: 1.5em 0;
-	padding: 0;
-	border-radius: 0;
-	text-align: center;
-}
-
-.code,
-code {
-	background: rgba(135, 131, 120, 0.15);
-	border-radius: 3px;
-	padding: 0.2em 0.4em;
-	border-radius: 3px;
-	font-size: 85%;
-	tab-size: 2;
-}
-
-code {
-	color: #eb5757;
-}
-
-.code {
-	padding: 1.5em 1em;
-}
-
-.code-wrap {
-	white-space: pre-wrap;
-	word-break: break-all;
-}
-
-.code > code {
-	background: none;
-	padding: 0;
-	font-size: 100%;
-	color: inherit;
-}
-
-blockquote {
-	font-size: 1.25em;
-	margin: 1em 0;
-	padding-left: 1em;
-	border-left: 3px solid rgb(55, 53, 47);
-}
-
-.bookmark {
-	text-decoration: none;
-	max-height: 8em;
-	padding: 0;
-	display: flex;
-	width: 100%;
-	align-items: stretch;
-}
-
-.bookmark-title {
-	font-size: 0.85em;
-	overflow: hidden;
-	text-overflow: ellipsis;
-	height: 1.75em;
-	white-space: nowrap;
-}
-
-.bookmark-text {
-	display: flex;
-	flex-direction: column;
-}
-
-.bookmark-info {
-	flex: 4 1 180px;
-	padding: 12px 14px 14px;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-.bookmark-image {
-	width: 33%;
-	flex: 1 1 180px;
-	display: block;
-	position: relative;
-	object-fit: cover;
-	border-radius: 1px;
-}
-
-.bookmark-description {
-	color: rgba(55, 53, 47, 0.6);
-	font-size: 0.75em;
-	overflow: hidden;
-	max-height: 4.5em;
-	word-break: break-word;
-}
-
-.bookmark-href {
-	font-size: 0.75em;
-	margin-top: 0.25em;
-}
-
-.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
-.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
-.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
-.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
-.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
-.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
-.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
-.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
-.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
-.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
-.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
-.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
-.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
-.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
-.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
-.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
-.highlight-default {
-	color: rgba(50, 48, 44, 1);
-}
-.highlight-gray {
-	color: rgba(115, 114, 110, 1);
-	fill: rgba(115, 114, 110, 1);
-}
-.highlight-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.highlight-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.highlight-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.highlight-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.highlight-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.highlight-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.highlight-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.highlight-red {
-	color: rgba(205, 60, 58, 1);
-	fill: rgba(205, 60, 58, 1);
-}
-.highlight-default_background {
-	color: rgba(50, 48, 44, 1);
-}
-.highlight-gray_background {
-	background: rgba(248, 248, 247, 1);
-}
-.highlight-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.highlight-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.highlight-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.highlight-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.highlight-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.highlight-purple_background {
-	background: rgba(248, 243, 252, 1);
-}
-.highlight-pink_background {
-	background: rgba(252, 241, 246, 1);
-}
-.highlight-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.block-color-default {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray {
-	color: rgba(115, 114, 110, 1);
-	fill: rgba(115, 114, 110, 1);
-}
-.block-color-brown {
-	color: rgba(159, 107, 83, 1);
-	fill: rgba(159, 107, 83, 1);
-}
-.block-color-orange {
-	color: rgba(217, 115, 13, 1);
-	fill: rgba(217, 115, 13, 1);
-}
-.block-color-yellow {
-	color: rgba(203, 145, 47, 1);
-	fill: rgba(203, 145, 47, 1);
-}
-.block-color-teal {
-	color: rgba(68, 131, 97, 1);
-	fill: rgba(68, 131, 97, 1);
-}
-.block-color-blue {
-	color: rgba(51, 126, 169, 1);
-	fill: rgba(51, 126, 169, 1);
-}
-.block-color-purple {
-	color: rgba(144, 101, 176, 1);
-	fill: rgba(144, 101, 176, 1);
-}
-.block-color-pink {
-	color: rgba(193, 76, 138, 1);
-	fill: rgba(193, 76, 138, 1);
-}
-.block-color-red {
-	color: rgba(205, 60, 58, 1);
-	fill: rgba(205, 60, 58, 1);
-}
-.block-color-default_background {
-	color: inherit;
-	fill: inherit;
-}
-.block-color-gray_background {
-	background: rgba(248, 248, 247, 1);
-}
-.block-color-brown_background {
-	background: rgba(244, 238, 238, 1);
-}
-.block-color-orange_background {
-	background: rgba(251, 236, 221, 1);
-}
-.block-color-yellow_background {
-	background: rgba(251, 243, 219, 1);
-}
-.block-color-teal_background {
-	background: rgba(237, 243, 236, 1);
-}
-.block-color-blue_background {
-	background: rgba(231, 243, 248, 1);
-}
-.block-color-purple_background {
-	background: rgba(248, 243, 252, 1);
-}
-.block-color-pink_background {
-	background: rgba(252, 241, 246, 1);
-}
-.block-color-red_background {
-	background: rgba(253, 235, 236, 1);
-}
-.select-value-color-default { background-color: rgba(84, 72, 49, 0.08); }
-.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
-.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
-.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
-.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
-.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
-.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
-.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
-.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
-.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
-
-.checkbox {
-	display: inline-flex;
-	vertical-align: text-bottom;
-	width: 16;
-	height: 16;
-	background-size: 16px;
-	margin-left: 2px;
-	margin-right: 5px;
-}
-
-.checkbox-on {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-
-.checkbox-off {
-	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
-}
-	
-</style></head><body><article id="22591944-7254-80f6-ab48-c1f9d91568f3" class="page sans"><header><img class="page-cover-image" src="https://www.notion.so/images/page-cover/gradients_3.png" style="object-position:center 60%"/><div class="page-header-icon page-header-icon-with-cover"><span class="icon">❓</span></div><h1 class="page-title">FOIRE AUX QUESTIONS DÉPARTEMENT DE PSYCHOLOGIE</h1><p class="page-description"></p></header><div class="page-body"><p id="22a91944-7254-8080-9152-de47e2ed9cf3" class="">  </p><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">LICENCE 1</summary><div class="indented"><p id="22991944-7254-8087-84f8-f87f135bf98b" class="">
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Poppins:wght@600;700;800&display=swap');
+
+:root{
+  --bg:#f5f6fb;
+  --surface:#ffffff;
+  --text:#2b2d3a;
+  --text-muted:#666a7d;
+  --primary:#6c5ce7;
+  --primary-dark:#4d3fc7;
+  --primary-soft:#efeaff;
+  --accent:#ff9776;
+  --border:#e6e6f0;
+  --radius:14px;
+  --shadow:0 2px 10px rgba(45,40,90,0.06);
+  --shadow-hover:0 6px 20px rgba(45,40,90,0.12);
+}
+
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#181a24;
+    --surface:#22242f;
+    --text:#eceaf5;
+    --text-muted:#a3a6b8;
+    --primary:#a99bff;
+    --primary-dark:#8f7dff;
+    --primary-soft:#2c2a45;
+    --accent:#ffab8a;
+    --border:#33354a;
+    --shadow:0 2px 10px rgba(0,0,0,0.35);
+    --shadow-hover:0 6px 20px rgba(0,0,0,0.45);
+  }
+}
+
+*{ box-sizing:border-box; }
+
+html,body{ margin:0; padding:0; }
+
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:'Nunito Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height:1.6;
+  white-space:normal;
+  -webkit-font-smoothing:antialiased;
+}
+
+a, a.visited{ color:var(--primary-dark); text-decoration:underline; text-decoration-color:var(--primary-soft); text-underline-offset:2px; }
+a:hover{ color:var(--primary); }
+
+h1,h2,h3{ font-family:'Poppins', 'Nunito Sans', sans-serif; letter-spacing:-0.01em; line-height:1.25; font-weight:700; margin:0; color:var(--text); }
+
+/* ---------- Hero header ---------- */
+.hero{
+  background:linear-gradient(135deg, var(--primary) 0%, #8f7dff 55%, var(--accent) 130%);
+  color:#fff;
+  padding:3rem 1.5rem 4.5rem;
+  text-align:center;
+}
+.hero-icon{ font-size:3rem; margin-bottom:0.5rem; }
+.hero h1.page-title{
+  font-size:clamp(1.6rem, 4vw, 2.5rem);
+  font-weight:800;
+  color:#fff;
+  max-width:800px;
+  margin:0 auto 0.75rem;
+}
+.hero p.hero-subtitle{
+  max-width:640px;
+  margin:0 auto;
+  color:rgba(255,255,255,0.9);
+  font-size:1.05rem;
+}
+
+/* ---------- Sticky toolbar ---------- */
+.faq-toolbar{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:var(--surface);
+  border-bottom:1px solid var(--border);
+  box-shadow:var(--shadow);
+  margin:-2.5rem auto 0;
+  max-width:900px;
+  border-radius:var(--radius) var(--radius) 0 0;
+  padding:1rem 1.25rem;
+}
+.faq-search-row{ display:flex; gap:0.6rem; flex-wrap:wrap; align-items:center; }
+.faq-search-box{
+  flex:1 1 220px;
+  position:relative;
+}
+.faq-search-box input{
+  width:100%;
+  padding:0.65rem 2.2rem 0.65rem 2.4rem;
+  border-radius:999px;
+  border:1px solid var(--border);
+  background:var(--bg);
+  color:var(--text);
+  font-size:0.95rem;
+  font-family:inherit;
+}
+.faq-search-box input:focus{ outline:2px solid var(--primary); outline-offset:1px; }
+.faq-search-box input::-webkit-search-cancel-button{ -webkit-appearance:none; appearance:none; }
+.faq-search-box .icon-search{
+  position:absolute; left:0.8rem; top:50%; transform:translateY(-50%);
+  opacity:0.5; pointer-events:none;
+}
+.faq-search-box .icon-clear{
+  position:absolute; right:0.6rem; top:50%; transform:translateY(-50%);
+  cursor:pointer; border:none; background:none; color:var(--text-muted);
+  font-size:1.1rem; padding:0.2rem 0.4rem; display:none; border-radius:50%;
+}
+.faq-search-box .icon-clear.visible{ display:block; }
+.faq-btn{
+  border:1px solid var(--border);
+  background:var(--surface);
+  color:var(--text);
+  padding:0.6rem 1rem;
+  border-radius:999px;
+  font-size:0.85rem;
+  font-weight:600;
+  cursor:pointer;
+  white-space:nowrap;
+  font-family:inherit;
+}
+.faq-btn:hover{ border-color:var(--primary); color:var(--primary-dark); }
+#faq-search-count{ font-size:0.8rem; color:var(--text-muted); white-space:nowrap; }
+
+.faq-nav{
+  display:flex;
+  gap:0.5rem;
+  overflow-x:auto;
+  margin-top:0.85rem;
+  padding-bottom:0.2rem;
+}
+.faq-nav-pill{
+  flex:none;
+  background:var(--primary-soft);
+  color:var(--primary-dark);
+  border-radius:999px;
+  padding:0.4rem 0.9rem;
+  font-size:0.8rem;
+  font-weight:600;
+  text-decoration:none;
+  white-space:nowrap;
+}
+.faq-nav-pill:hover{ background:var(--primary); color:#fff; }
+.faq-empty-state{
+  text-align:center;
+  color:var(--text-muted);
+  padding:2rem 1rem;
+  display:none;
+}
+.faq-empty-state.visible{ display:block; }
+
+/* ---------- Main content container ---------- */
+.page-body{
+  max-width:900px;
+  margin:0 auto 4rem;
+  padding:1.5rem 1.25rem 0;
+}
+
+/* Top-level "LICENCE 1" container: just a plain wrapper, no card look */
+.page-body > details{
+  border:none;
+}
+.page-body > details > summary{
+  font-family:'Poppins', sans-serif;
+  font-size:1.1rem;
+  font-weight:700;
+  color:var(--text-muted);
+  text-transform:uppercase;
+  letter-spacing:0.06em;
+  cursor:pointer;
+  list-style:none;
+  padding:0.5rem 0.1rem;
+}
+.page-body > details > summary::-webkit-details-marker{ display:none; }
+
+/* Period-level cards (details whose summary has the underlined span) */
+ul.toggle{ list-style:none; margin:0; padding:0; }
+ul.toggle > li{ margin-bottom:1rem; }
+
+ul.toggle > li > details{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+}
+ul.toggle > li > details > summary{
+  list-style:none;
+  cursor:pointer;
+  padding:1.1rem 1.3rem;
+  font-size:1.15rem;
+  display:flex;
+  align-items:center;
+  gap:0.6rem;
+}
+ul.toggle > li > details > summary::-webkit-details-marker{ display:none; }
+ul.toggle > li > details > summary::before{
+  content:"›";
+  display:inline-block;
+  font-size:1.4rem;
+  font-weight:800;
+  color:var(--primary);
+  transition:transform 0.2s ease;
+  flex:none;
+}
+ul.toggle > li > details[open] > summary::before{ transform:rotate(90deg); }
+ul.toggle > li > details > summary span[style*="border-bottom"]{
+  border-bottom:none !important;
+  color:var(--primary-dark);
+}
+
+/* Nested (question-level) list inside a period */
+ul.toggle > li > details > ul.toggle{
+  padding:0 1.3rem 0.6rem 1.3rem;
+}
+ul.toggle ul.toggle > li{ margin-bottom:0.6rem; }
+ul.toggle ul.toggle > li:last-child{ margin-bottom:0; }
+
+/* Question-level details (the actual Q&A) */
+ul.toggle ul.toggle > li > details{
+  background:var(--bg);
+  border:1px solid var(--border);
+  box-shadow:none;
+  border-radius:10px;
+}
+ul.toggle ul.toggle > li > details > summary{
+  font-size:1rem;
+  font-weight:700;
+  padding:0.85rem 1rem;
+  color:var(--text);
+}
+ul.toggle ul.toggle > li > details > summary::before{
+  color:var(--accent);
+  font-size:1.2rem;
+}
+ul.toggle ul.toggle > li > details[open]{
+  border-color:var(--primary);
+}
+ul.toggle ul.toggle > li > details p{
+  padding:0 1rem 1rem 2.1rem;
+  margin:0.3rem 0 0;
+  color:var(--text);
+}
+ul.toggle ul.toggle > li > details .indented{
+  padding:0 1rem 1rem 2.1rem;
+}
+
+.indented{ padding-left:0; }
+
+p{ margin:0.5em 0; }
+
+li.faq-li-hidden{ display:none !important; }
+
+mark, .faq-highlight{
+  background:#fff1a8;
+  color:#3a2f00;
+  border-radius:3px;
+  padding:0 0.15em;
+}
+@media (prefers-color-scheme: dark){
+  mark, .faq-highlight{ background:#7a6a00; color:#fff6cf; }
+}
+
+/* Back to top button */
+#faq-to-top{
+  position:fixed;
+  right:1.25rem;
+  bottom:1.25rem;
+  width:2.75rem;
+  height:2.75rem;
+  border-radius:50%;
+  border:none;
+  background:var(--primary);
+  color:#fff;
+  font-size:1.3rem;
+  cursor:pointer;
+  box-shadow:var(--shadow-hover);
+  opacity:0;
+  transform:translateY(10px);
+  pointer-events:none;
+  transition:opacity 0.2s ease, transform 0.2s ease;
+  z-index:30;
+}
+#faq-to-top.visible{ opacity:1; transform:translateY(0); pointer-events:auto; }
+
+footer.faq-footer{
+  text-align:center;
+  color:var(--text-muted);
+  font-size:0.85rem;
+  padding:1.5rem 1rem 2.5rem;
+}
+
+@media (max-width:600px){
+  .hero{ padding:2.2rem 1rem 3.5rem; }
+  .faq-toolbar{ margin-top:-2.2rem; border-radius:var(--radius); }
+  ul.toggle > li > details > summary{ font-size:1.05rem; padding:0.9rem 1rem; }
+}
+</style></head><body><article id="22591944-7254-80f6-ab48-c1f9d91568f3" class="page sans"><header class="hero">
+  <div class="hero-icon">❓</div>
+  <h1 class="page-title">FOIRE AUX QUESTIONS DÉPARTEMENT DE PSYCHOLOGIE</h1>
+  <p class="hero-subtitle">Retrouvez ici les réponses aux questions les plus fréquentes, de la pré-rentrée jusqu'aux rattrapages.</p>
+</header>
+<div class="faq-toolbar">
+  <div class="faq-search-row">
+    <div class="faq-search-box">
+      <span class="icon-search">🔎</span>
+      <input type="search" id="faq-search" placeholder="Rechercher une question (ex: emploi du temps, rattrapages...)" autocomplete="off" />
+      <button class="icon-clear" id="faq-search-clear" aria-label="Effacer la recherche" type="button">✕</button>
+    </div>
+    <span id="faq-search-count"></span>
+    <button class="faq-btn" id="faq-expand-all" type="button">Tout ouvrir</button>
+    <button class="faq-btn" id="faq-collapse-all" type="button">Tout réduire</button>
+  </div>
+  <nav class="faq-nav" id="faq-nav-links" aria-label="Navigation rapide"></nav>
+</div>
+<p class="faq-empty-state" id="faq-empty-state">Aucune question ne correspond à votre recherche.</p><div class="page-body"><p id="22a91944-7254-8080-9152-de47e2ed9cf3" class="">  </p><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">LICENCE 1</summary><div class="indented"><p id="22991944-7254-8087-84f8-f87f135bf98b" class="">
 </p><ul id="22991944-7254-801c-92cb-f6b3a73e30ba" class="toggle"><li><details open=""><summary><strong><span style="border-bottom:0.05em solid">De août à septembre - C’est la (pré)-rentrée : que dois-je savoir ?</span></strong>   </summary><ul id="22a91944-7254-80fe-9b6c-df73d832bfa2" class="block-color-default toggle"><li><details open=""><summary><strong>J’ai des questions sur mon inscription administrative à l’Université</strong></summary><p id="22a91944-7254-8081-9b1a-df48827889ea" class="">Pour toutes questions concernant la marche à suivre, le paiement des frais d’inscription, les pièce justificative demandées, le dossier à compléter, vous devez contacter la scolarité : <a href="mailto:scolarite-relais-pontdebois@univ-lille.fr">scolarite-relais-pontdebois@univ-lille.fr</a>.</p><p id="22a91944-7254-80a6-91d5-ce1e9657eed6" class="">
 </p></details></li></ul><ul id="22a91944-7254-80e2-a1cf-f0dd2eb21811" class="toggle"><li><details open=""><summary><strong>Je dois faire une remédiation mathématique ou biologie : le cas des OUI-SI</strong></summary><p id="22a91944-7254-80a0-a40c-e8510c575255" class="">Si vous avez été admis·e en Licence 1 de Psychologie via un « OUI-SI », vous devez alors faire une remédiation soit en mathématiques, soit en biologie, ou les deux.</p><p id="22a91944-7254-8093-8143-d4f46b722900" class="">La remédiation mathématique commence le mardi 02 septembre 2025, et les informations seront disponibles sur Moodle.</p><p id="22a91944-7254-80c6-9d0b-efa948030bfb" class="">La remédiation en biologie aura lieu durant l’année. Les groupes de TD et la répartition des étudiants est également disponible sur le Moodle de la L1.</p></details></li></ul><ul id="22a91944-7254-805f-9308-ee053e01f809" class="toggle"><li><details open=""><summary><strong>Quand est-ce que les cours reprennent ?</strong></summary><p id="22a91944-7254-80f2-b920-ea29a9eb898e" class="">Les cours pour la Licence 1 de Psychologie à l&#x27;Université de Lille commenceront la semaine du 08 septembre 2025, selon l&#x27;emploi du temps qui vous sera communiqué, disponible sur le Moodle de la L1.</p></details></li></ul><ul id="22a91944-7254-80f9-90ac-ef2374799545" class="toggle"><li><details open=""><summary><strong>Guide des études et charge d’enseignement</strong></summary><p id="22a91944-7254-8027-9fd8-f51f82d09505" class="">En arrivant en 1ère année de Licence, vous pouvez être surpris·e·s du nombre d’heures par semaines.  Pour en savoir plus, vous pouvez vous rapprocher du guide des études pour connaître les enseignements dispensés, le nombre d’heure par semaine. Vous devez également prendre en compte le nombre d’heure de travail à la maison (révision, relecture, dossiers etc.).</p><p id="22a91944-7254-8035-a5cc-d67d5c6e0522" class="">Les guides des études sont disponibles sur la page Moodle Accompagnement des étudiants-Département de psychologie. Vous pouvez y accéder avec la clé « Psychoaccomp » : <a href="https://moodle.univ-lille.fr/course/view.php?id=28512">https://moodle.univ-lille.fr/course/view.php?id=28512</a>. Ils figurent également sur le site de la faculté <a href="https://psysef.univ-lille.fr/">https://psysef.univ-lille.fr/</a>.</p></details></li></ul><ul id="22a91944-7254-8065-99f3-cb69dcef929e" class="toggle"><li><details open=""><summary><strong>Comment accéder à mon emploi du temps ?</strong></summary><p id="22a91944-7254-803a-baad-f70cffd7f199" class="">Tous les emplois du temps sont disponibles sur le Moodle de la Licence 1. Mme Delacour-Petitjean, secrétaire de la Licence 1 se charge de les publier UE par UE sur le panneau d’affichage du Moodle de la L1. Il faut donc se référer à ces différents fichiers, (et non à l’application LilU) et créer son propre emploi du temps manuellement. Normalement, les emplois du temps sont disponibles sur l’ENT, mais pour l’année 2025-2026, cela n’est pas encore tout à fait fonctionnel. Par conséquent, il est plus prudent de se référer aux fichiers Excel délivrés par le secrétariat.</p><p id="22a91944-7254-808d-a621-f5913fb845a0" class="">Mme Delacour-Petitjean est seule pour la gestion des 1300 étudiant·e·s, par conséquent les délais de traitement peuvent être allongé Plus elle aura de mail à ce sujet, moins elle sera en capacité d’y répondre. Merci d’être patient·e.</p></details></li></ul><ul id="22a91944-7254-809f-9b0f-dfa2cee1995e" class="toggle"><li><details open=""><summary><strong>Comment connaître mon groupe de TD ?</strong></summary><p id="22a91944-7254-8008-8ccf-f9ab46513f89" class="">Un fichier Excel est disponible sur Moodle comprenant tous les groupes de TD (N=24) avec la répartition des étudiant·es.</p><p id="22a91944-7254-804a-ab12-efd5492dab33" class="">Si vous ne trouvez pas votre nom dans le fichier Excel avec la répartition des étudiant·e·s, cela vient peut-être du fait que vous vous soyez inscrit·e tardivement à l’Université (inscription administrative). Ainsi, nous vous remercions de rejoindre le groupe de TD qui se rapproche le plus de votre nom de famille. En effet, les groupes de TD sont répartie par ordre alphabétique. Il faut également que vous en informiez le secrétariat : <a href="mailto:secretariat-psychologie-licence1@univ-lille.fr">secretariat-psychologie-licence1@univ-lille.fr</a>.</p></details></li></ul><ul id="22a91944-7254-804d-8dad-e4c5e67cb303" class="toggle"><li><details open=""><summary><strong>J’aimerais modifier mon emploi du temps</strong></summary><p id="22a91944-7254-8088-9239-cc1fa4f46f2c" class="">Si vous êtes étudiant·e salarié·e, ou que vous habitez hors de la MEL (et avez recours à du co-voiturage), vous pouvez faire une demande de changement de groupe auprès de Madame Delacour-Petitjean avec vos justificatifs : soit un contrat de travail avec l’indication de vos horaires, soit une attestation de domicile. Attention, le changement de groupe n’inclus pas un emploi du temps à la carte, vous suivrez tous les enseignements du nouveau groupe de TD choisi. Vous pouvez également, lors du mois de septembre uniquement, demander à permuter avec le groupe d’un ou d’une autre étudiant·e. Dans ce cas, merci d’inclure vos deux noms dans le mail et de mettre le·la deuxième étudiant·e en copie du mail.</p><p id="22a91944-7254-8078-b7f7-cdc821e50979" class="">En fonction de votre emploi du temps du second semestre (S2), vous avez la possibilité de faire de nouveau une demande d’aménagement ou de changement de groupe si votre nouvel emploi du temps en correspond pas à votre situation. Les étapes sont les mêmes qu’au S1.</p></details></li></ul><ul id="22a91944-7254-80db-9f60-e0398bdb6237" class="toggle"><li><details open=""><summary><strong>Puis-je être dispensé·e de certains cours ? </strong></summary><p id="22a91944-7254-8001-b170-cd1120032ae3" class="">Si vous avez a déjà des compétences avérées et justifiées dans une des matières délivrées en Licence 1 de Psychologie (par exemple en biologie, mathématique, anglais etc.), vous pouvez faire une demande de dispense. Pour cela, un formulaire de demande de dispense est disponible sur le Moodle de la L1. Il faut compléter les documents, et déposer le dossier sur Moodle. La responsable pédagogique de Licence 1, Mme Justin est chargée de vérifier et valider les demandes de dispenses, en fonction des justificatifs que vous lui donnerez. Cela n’est pas systématique ni automatique. Un retour de mail vous sera envoyé pour attester la validation de votre demande de dispense. Si vous êtes dispensé·e alors vous n’avez pas besoin d’assister aux CM et aux TD ni de passer les examens. Cela peut prendre un peu de temps, mais vous serez bien indiqué comme étant « dispensé·e » sur votre relevé de note. Cette mise à jour se fait souvent à la fin du semestre ou de l’année. Pas d’inquiétude si cela n’apparaît pas tout de suite.</p><p id="22a91944-7254-80c3-a5ec-c196dd73415c" class="">Attention à bien mettre toutes les pièces justificatives, c’est-à-dire votre formulaire, dans son entièreté, vos relevés de note, certificat d’étude et tout autre document qui viendrait justifier votre demande.</p><p id="22a91944-7254-8093-89de-f470d82e7108" class="">Les demandes de dispense doivent être faites en septembre, à la fois pour le 1er Semestre et le 2nd. Passé la date limite, il ne sera plus possible de demander une dispense, et ce, même au second semestre.</p><p id="22a91944-7254-80a1-9345-ea7fecf35df6" class="">Lors de vos résultats et sur vos relevés de notes, vous n’aurez pas de note attribuée à cette matière puisque vous en êtes dispensé·e. Vous n’aurez pas de zéro ni de DEF, juste vous n’aurez rien, une case blanche ou bien une case DISP / Dispense.</p><p id="22a91944-7254-803b-9fd6-ee9dec363d64" class="">Tant que vous n’avez pas votre demande de dispense acceptée, vous devez vous rendre aux enseignements, car vote demande peut être refusée. Si c’est le cas, alors vous aurez manqué des cours.</p><p id="22a91944-7254-80cd-863f-f2ab3247b5f0" class="">Les étudiant·e·s redoublants ayant déjà validé des matières l’année dernière n’ont pas à les repasser cette année. Vous n’avez pas besoin de faire de demande de dispenses, à l’exception des matières pour lesquelles vous aviez fait une demande de dispense. En effet,  les demandes de dispense doivent être refaites chaque année.</p><p id="22a91944-7254-8002-91ca-ce3a066a73b4" class="">Pour les étudiant·e·s ayant validé leur UEPE intégration dans une autre filière, vous êtes obligé·e de faire une demande de dispense car votre note ne sera pas reportée.</p></details></li></ul><ul id="22a91944-7254-80e6-a37b-d1ee943be326" class="toggle"><li><details open=""><summary><strong>Je souhaite bénéficier d’un aménagement de mes études</strong></summary><ul id="22a91944-7254-80cd-9b26-c58f719fc9e8" class="toggle"><li><details open=""><summary><em><strong>Je suis salarié·e, étudiant·e-aidant·e, sportif de bon niveau, chargé·e de famille…</strong></em>    </summary><p id="22a91944-7254-80e3-b715-e155d1c46bc1" class="">Si vous avez une situation particulière (par exemple exemple : vous êtes salarié·e, chargé.e de famille, étudiant·e aidant·e, sportif de bon niveau etc.) vous pouvez solliciter un aménagement d’études. Il ne faut pas hésiter à le faire. Pour cela, vous devez vous rendre sur votre ENT, dans « Scolarité », puis « Aménager mes études », cliquer sur votre situation, télécharger et compléter le formulaire spécifique à votre situation. Ce formulaire est à renvoyer avec les pièces justificative à la responsable pédagogique de la Licence 1, Pauline Justin, à l’adresse mail : <a href="mailto:Responsable-pedagogique-L1@univ-lille.fr">Responsable-pedagogique-L1@univ-lille.fr</a>. Une fois le dossier validé, Mme Justin transmet votre demande à Mme Grosset-Janin, Chargée de l’accompagnement des étudiants et référente handicap.</p></details></li></ul><ul id="22a91944-7254-808d-97c3-ea2a5868f092" class="toggle"><li><details open=""><summary><em><strong>Je suis en situation de handicap…</strong></em></summary><p id="22a91944-7254-803c-8718-d27b1663f14f" class="">Si vous êtes en situation de handicap, n’hésitez pas à formuler une demande d’aménagements auprès du bureau de la vie étudiante et handicap (BVEH).</p><p id="22a91944-7254-80f9-b61d-d38d8cfef8ee" class="">Pour tout accompagnement sur cette démarche, vous pouvez contacter Sarah Grosset-Janin à l’adresse suivante : <a href="mailto:accompagnement.etudiants@univ-lille.fr">accompagnement.etudiants@univ-lille.fr</a>, ou les deux référentes handicap enseignantes de notre département Maité Brunel et Gwendoline Mahé (<a href="mailto:maite.brunel@univ-lille.fr">maite.brunel@univ-lille.fr</a> ou <a href="mailto:gwendoline.mahe@univ-lille.fr">gwendoline.mahe@univ-lille.fr</a>)</p><p id="22a91944-7254-80ee-97b2-db8ff5bf3acc" class="">Une fois vos aménagements pour situation de handicap validés, ils sont valables l’année universitaire complète, vous devrez refaire une demande au début de chaque année universitaire.</p><p id="22a91944-7254-80ee-86f4-f2e6947feeec" class="">Toutes les informations relatives à cette procédure sont disponibles sur la page Moodle Accompagnement des étudiants <a href="https://moodle.univ-lille.fr/course/view.php?id=28512">https://moodle.univ-lille.fr/course/view.php?id=28512</a> (clé « Psychoaccomp ») et sur le site de l’université : <a href="https://ent.univ-lille.fr/etu/scolarite/etudes-et-handicap">https://ent.univ-lille.fr/etu/scolarite/etudes-et-handicap</a>   </p></details></li></ul><ul id="22a91944-7254-8027-9487-cdcf7e99ab17" class="toggle"><li><details open=""><summary><em><strong>Je suis en situation de handicap de façon ponctuelle (exemple : bras ou jambe cassée)</strong></em></summary><p id="22a91944-7254-80f4-b865-de7ce06f88d7" class="">Pour toute demande d’aménagement provisoires (par exemple, si vous êtes en béquille et nécessitez de prendre l’ascenseur, si vous vous êtes cassé·e le poignet et ne pouvez plus écrire…), il vous faudra contacter directement le centre de santé des étudiants afin de prendre rendez-vous avec un médecin de l’université, qui vous fournira une proposition d’aménagement à transmettre au plus vite à Sarah Grosset-Janin. : <a href="https://www.univ-lille.fr/vie-des-campus/prendre-soin-de-sa-sante/centre-de-sante-etudiant">https://www.univ-lille.fr/vie-des-campus/prendre-soin-de-sa-sante/centre-de-sante-etudiant</a>.</p></details></li></ul></details></li></ul></details></li></ul><ul id="22991944-7254-8090-9612-c986f935f862" class="toggle"><li><details open=""><summary><strong><span style="border-bottom:0.05em solid">De septembre à novembre – les informations essentielles pour bien débuter son 1er semestre</span></strong></summary><ul id="22a91944-7254-8042-89c1-eeb9246a6851" class="toggle"><li><details open=""><summary><strong>Qui sont les responsables des UE ?  </strong></summary><p id="22a91944-7254-8042-bcbf-dc7255b56354" class="">Les noms et adresse mail des responsables des UE sont disponibles sur le Moodle de la Licence 1. Il n’y a pas de responsable de BCC.  </p></details></li></ul><ul id="22a91944-7254-80ce-9fd5-da6da352bb4c" class="toggle"><li><details open=""><summary><strong>Comment accéder à mes cours sur Moodle ? Ou à Moodle Examen ?</strong></summary><p id="22a91944-7254-80a7-a610-d2a0f015e11d" class="">Pour les Moodle de cours, des codes vous sont communiqués par les enseignant·e·s, le secrétariat pédagogique n’a pas accès à ces cours. En cas de soucis avec le Moodle, vous devez contacter les enseignant·e·s concernés.</p><p id="22a91944-7254-8012-b904-d2807500c1dd" class="">Les examens en distanciel ont lieu sur le Moodle examen, qui n’est pas le Moodle de vos cours. Vous y êtes automatiquement inscrit·e·s.</p><p id="22a91944-7254-807b-8201-ed5ef005f4a9" class="">Les pages ouvrent aux horaires de vos examens. En cas de soucis, merci de contacter directement les responsables de l’UE concerné·e·s.</p></details></li></ul><ul id="22a91944-7254-80c1-b12c-eae13d520593" class="toggle"><li><details open=""><summary><strong>Qu’est-ce que l’UE PE intégration à distance au 1er semestre ?</strong></summary><p id="22a91944-7254-8026-ba26-db03e6559858" class="">Le cours d’UE PE (UE Projet de l’Étudiant) dit, d’intégration à distance à lieu uniquement sur Moodle. Vous y êtes inscrit·e·s automatiquement. Il s’agit de divers exercices à faire avant le mois de novembre. Attention les rattrapages ont lieu en décembre pour ce cours.<br/>Vous trouverez le cours dans votre tableau de bord Moodle.<br/></p></details></li></ul><ul id="22a91944-7254-80f4-93e0-c29c6c9a89d2" class="toggle"><li><details open=""><summary><strong>Comment changer de langue vivante pour ma Licence ?</strong></summary><p id="22a91944-7254-80ea-ac92-df0bfb3d1000" class="">Dès la rentrée vous êtes automatiquement inscrit·e·s en cours d’anglais.</p><p id="22a91944-7254-805d-869e-e912b1a4566e" class="">Si vous souhaitez choisir une autre langue pour votre UE langue vivante, vous le pouvez, il faudra en revanche faire les démarches pour vous inscrire auprès du pôle DELANG. Vous pourrez ainsi choisir parmi une sélection de langue (par exemple l’espagnol, le chinois, le russe, l’allemand…)</p><p id="22a91944-7254-800f-9006-cbc8e7c5d6ed" class="">Attention, il vous est possible de changer de langue entre le semestre 1 et le semestre 2.</p><p id="22a91944-7254-806c-8fa6-ebe14df7f9d1" class="">En revanche, la langue choisie au semestre 2 devra être conservée tout au long de votre licence. Vous ne pourrez plus changer après cela pour les années suivantes. Ainsi, si vous vous rendez compte que votre choix ne vous convient pas, n’attendez pas la fin de l’année pour le faire.</p><p id="22a91944-7254-80bb-8600-e4cd34bc7fde" class="">Si vous avez des questions à propos des langues (hors anglais) vous devez contacter le pôle DELANG directement (<a href="mailto:delang.pdb@univ-lille.fr">delang.pdb@univ-lille.fr</a>).</p><p id="22a91944-7254-80b7-ba5e-cec10951005a" class="">Lors des inscriptions pédagogiques vous devrez bien sélectionner la langue choisie. Ne vous trompez pas, au risque d’être convoqué·e au mauvais examen.</p></details></li></ul><ul id="22a91944-7254-80b4-bd82-f47eba8adcdf" class="toggle"><li><details open=""><summary><strong>Je veux quitter la Psychologie et me réorienter</strong>   </summary><p id="22a91944-7254-80c0-bfd5-e408f103f270" class="">Si vous souhaitez vous réorienter en tout début d’année (septembre), certains parcours ouvrent et permettent des inscriptions de dernières minutes. Vous pouvez directement y candidater via votre ENT. Toutes les procédures de réorientation sont disponibles sur ce lien :  <a href="https://reo-suaio.univ-lille.fr/">https://reo-suaio.univ-lille.fr</a></p><p id="22a91944-7254-809c-9729-e246de6d7a0b" class="">Pour toute question, vous pouvez contacter le SUAIO : <a href="https://univ-lille.fr/formation/sinformer-sorienter">https://univ-lille.fr/formation/sinformer-sorienter</a></p><p id="22a91944-7254-8001-b2af-c4f35929013a" class="">Attention, cette procédure ne fonctionne pas pour les étudiant·e·s en LAS ou PASS désirant intégrer une L1 psychologie dite « classique ».</p></details></li></ul><ul id="22a91944-7254-8089-b7d0-c1da997ada7a" class="toggle"><li><details open=""><summary><strong>Je dois réaliser mes inscriptions pédagogiques. A quoi ça sert ?</strong>   </summary><p id="22a91944-7254-80d5-8bc9-d427f3464981" class="">Les inscriptions pédagogiques servent à vous inscrire aux examens. Pour la session 1 du S1 (examen du premier semestre), les inscriptions pédagogiques (IP) ouvrent courant octobre. Vous serez informé·e sur Moodle et/ou par mail par le secrétariat. Pour le second semestre, il est nécessaire que vous vous inscriviez également à ces mêmes inscriptions pédagogiques, elles ouvrent en mars / avril. Vous serez également informé·e par le secrétariat.</p><p id="22a91944-7254-80aa-8056-f4f663a9001a" class="">Pour les étudiant·e·s redoublant·e, si vous avez déjà validé tout un semestre, alors vous ne passerez aucun examen pour ce dit semestre, il n’est donc pas nécessaire que vous réalisiez vos inscriptions pédagogiques pour des examens que vous n’allez pas passer.<br/>Pour les étudiant·e·s dispensés de certaines UE, vous devez malgré tout vous inscrire aux IP de ces UE. Les dispenses seront pris en compte plus tard.<br/></p><p id="22a91944-7254-80c5-814a-e8a7ff32928b" class="">Si vous ne procédez pas entièrement à vos IP, vous n’aurez pas de note. Celles-ci de pourront pas remonter à votre dossier, même si vous avez bien réalisé vos examens. Vous devrez donc passer aux rattrapages. Ainsi, sans IP vous ne serez pas convoqué aux examens et n’aurez donc aucune information à ce sujet via votre ENT.</p></details></li></ul><ul id="22a91944-7254-8072-9db8-e23d66cb823a" class="toggle"><li><details open=""><summary><strong>Je suis en LAS 1 et j’ai des questions sur ma scolarité, qui dois-je contacter ?</strong>   </summary><p id="22a91944-7254-8097-b358-e07be0578231" class="">Pour toutes questions relatives à la LAS ou aux cours de médecine, vous pouvez contacter Mme Claire Ducro, qui est notre référente au sein du département de psychologie. <a href="mailto:claire.ducro@univ-lille.fr">claire.ducro@univ-lille.fr</a></p></details></li></ul></details></li></ul><ul id="22991944-7254-803c-9db5-d8363f5b9e42" class="toggle"><li><details open=""><summary><strong><span style="border-bottom:0.05em solid">De novembre à février – comment gérer la période des examens ?</span></strong></summary><ul id="22a91944-7254-80bd-8b36-d4b56bfbe88c" class="toggle"><li><details open=""><summary><strong>Quand auront lieu les examens ?</strong></summary><p id="22a91944-7254-8005-9c81-eb0de0f6396d" class="">Le calendrier universitaire, disponible sur Internet, sur le site de l’Université de Lille mais également sur le Moodle de la licence 1 vous indique les périodes des examens. Les examens du S1 se font en décembre ainsi qu’en janvier. Vous recevrez une convocation pour chacun des examens avec les horaires et le lieu. Avant cette convocation, il n’est pas possible de vous fournir les dates précises des examens, car elles ne sont pas encore à notre disposition. Nous-mêmes (responsable pédagogique et secrétariat), ne connaissons pas les dates.</p></details></li></ul><ul id="22a91944-7254-8071-a204-c7eaf9402363" class="toggle"><li><details open=""><summary><strong>Je suis convoqué·e aux examens</strong></summary><p id="22a91944-7254-80ff-b416-ee5b135541b8" class="">A l’approche des examens, vous serez convoqué·e·s à tous les examens, quelle que soit votre situation. Cette convocation se trouve sur votre ENT, dans la section « calendrier des examens ».</p><p id="22a91944-7254-8041-b3d8-c166879071f3" class="">Même si vous êtes dispensé·e d’une UE, vous serez convoqué·e à l’ensemble des examens. Il est impératif d’avoir ces éléments en tête et de savoir à quel examen vous devez vous rendre, ou non.</p><p id="22a91944-7254-8069-b845-d66cd4692ba4" class="">Attention, pour les étudiant·e·s en situation de handicap qui composent en salle séparée, vous recevrez une convocation par mail du relais scolarité, merci de ne pas tenir compte des salles qui figurent sur votre ENT.</p></details></li></ul><ul id="22a91944-7254-809e-aa77-df32d060ee70" class="toggle"><li><details open=""><summary><strong>Comment justifier mon absence à un examen ? </strong></summary><p id="22a91944-7254-80ad-ab78-dbf1af3db725" class="">Si vous êtes absent·e a un examen, il vous faut absolument transmettre votre justificatif d’absence ou certificat médical au secrétariat dans les 72h qui suivent votre absence. C’est le seul cas où il vous faudra en fournir un. Il faut envoyer ses justificatifs d’absence au secrétariat de la L1 de psychologie : <a href="mailto:secretariat-psychologie-licence1@univ-lille.fr">secretariat-psychologie-licence1@univ-lille.fr</a> ET à votre responsable d’UE.</p></details></li></ul><ul id="22a91944-7254-80d8-a3a1-c36cbbe53ef9" class="toggle"><li><details open=""><summary><strong>Mes examens de psychologie et de sport ont lieu en même temps, que faire ?</strong></summary><p id="22a91944-7254-8012-8a1e-cb3ea0177556" class="">Il est possible que les examens de psychologie et ceux de l’UEPE sport tombent au même moment. Il est recommandé de privilégier les examens de psychologie et de changer de sport ou de groupe de sport pour réaliser l’examen de sport ultérieurement. Ces modifications doivent être vues avec Madame Arlène Sturbaut, du SUAPS : <a href="mailto:arlene.sturbaut@univ-lille.fr">arlene.sturbaut@univ-lille.fr</a>. Pour rappel, si vous ne vous présentez pas à un examen, quel qu’il soit, vous serez noté·e défaillant·e. Le chevauchement de deux examens n’est pas un justificatif valable vous permettant d’avoir la mention ABJ (Absence Justifiée).</p></details></li></ul><ul id="22a91944-7254-80f4-8208-e9c4dfcd64f3" class="toggle"><li><details open=""><summary><strong>Je viens de recevoir mes résultats aux examens, comment les comprendre ?</strong></summary><p id="22a91944-7254-8052-b6ea-f57e9b1b3fcb" class="">Dans votre relevé de note (provisoire, du S1 ou S2), vous verrez apparaitre la moyenne aux BCC et aux UE de ces BCC, ainsi que le statut de chacun de ces éléments (ADM, AJ, DEF, ABI, ABJ, ADMC). Voici la définition des acronymes que vous pourrez voir :</p><ul id="22a91944-7254-80bc-9152-c68413e7f19d" class="bulleted-list"><li style="list-style-type:disc">ADM = Admis (l’UE, ou le BCC est validé)</li></ul><ul id="22a91944-7254-8085-9fce-e3bf906f4bd0" class="bulleted-list"><li style="list-style-type:disc">ADMC = Admis par compensation</li></ul><ul id="22a91944-7254-8007-84c5-de514838ec48" class="bulleted-list"><li style="list-style-type:disc">AJ = Ajourné (l&#x27;UE, ou le BCC n’est pas validé)</li></ul><ul id="22a91944-7254-80f4-ad83-e627b62d13b6" class="bulleted-list"><li style="list-style-type:disc">ABI = Absence Injustifiée</li></ul><ul id="22a91944-7254-8001-a664-e99b557146c5" class="bulleted-list"><li style="list-style-type:disc">ABJ = Absence Justifiée</li></ul><ul id="22a91944-7254-80c2-8245-d44e3f15ca92" class="bulleted-list"><li style="list-style-type:disc">DEF = Défaillant (absence injustifiée au CC et/ou absence justifiée ou injustifiée au CT). Dans ce cas, le calcul des moyennes aux BCC est bloqué. Cependant, les UE validées resteront validées.</li></ul><ul id="22a91944-7254-802e-850f-c53c6cc3a0d3" class="bulleted-list"><li style="list-style-type:disc">PrC = Pris en Compte (lorsque l’UE a été validée une année antérieure, la note obtenue a été prise en compte, même si elle n’apparait pas dans le tableau)</li></ul><p id="22a91944-7254-8086-b4ca-f3259b354c7c" class="">Plusieurs rappels du règlement des études, qui sont important à prendre en compte :</p><p id="22a91944-7254-8084-b776-e2b8b9b3daee" class="">1) Pour valider un semestre, vous devez valider chaque BCC du semestre.</p><p id="22a91944-7254-808b-8683-ef118b72c1c7" class="">2) Pour valider un BCC, il faut que la <span style="border-bottom:0.05em solid">moyenne</span> des notes des UE contenues dans ce BCC soit supérieure ou égale à 10 (les coefficients, correspondants aux ECTS, sont pris en compte).</p><p id="22a91944-7254-8065-b9a9-c2bb63fdb759" class="">3) Lorsqu’un BCC est validé (moyenne au BCC supérieure ou égale à 10), toutes les UE qu’il contient sont validées (même si vous avez une note inférieure à 10 à une ou plusieurs UE au sein du BCC). Vous ne passez aucune UE au rattrapage pour un BCC validé, un BCC validé restera validé. Même si vous êtes insatisfait·e de votre note, vous ne pourrez pas aller aux rattrapages.</p><p id="22a91944-7254-8088-896b-e03ded424ae2" class="">4) Lorsqu’un BCC n’est pas validé (moyenne au BCC inférieure à 10), mais qu’une UE dans ce BCC est validée, vous ne repassez pas tout le BCC, uniquement les UE non validées au sein du BCC non validé. Une UE validée reste validée.</p><p id="22a91944-7254-80a6-8fea-d94f38490ec6" class="">5) Il existe une compensation entre les BCC entre le semestre 1 et le semestre 2. C’est à dire que vous pourrez, par compensation, valider un BCC dont la moyenne est inférieure à 10 au S1, en validant ce même BCC (n°1, 2, 3 ou 4) au S2 avec une moyenne suffisamment bonne pour qu’ensemble les deux BCC aient une moyenne supérieure à 10.</p><p id="22a91944-7254-8050-ae51-d62806b37a23" class="">6) Pour celles et ceux qui auront besoin de rattraper des UE/BCC, l’inscription en session 2 (rattrapages) sera automatique, vous n’aurez rien d’autre à faire que de vous présenter aux examens de rattrapage en juin prochain. Toutes ces informations s’afficheront sur votre ENT quelques semaines avant la période des rattrapages.</p><p id="22a91944-7254-802f-bf73-e4b17c094885" class="">7) Le jury n’accorde pas de point de jury en session 1, inutile donc de faire des demandes en ce sens.</p><p id="22a91944-7254-80f8-88bc-eb579f98b27a" class="">8) Les résultats définitifs seront disponibles via l&#x27;ENT après le jury de régulation à la fin du mois de février pour le S1, mai pour le S2, et début juillet pour la session de rattrapage.</p><p id="22a91944-7254-80cb-b740-c376a90d7f0f" class="">A l’issu du S1, vous verrez que votre moyenne générale sur l’année sera inférieure à 10/20. Cela est normal. Celle-ci est divisée en 2 étant donné que la moyenne générale de l’année est composée de celle du S1 et du S2. A la fin du Semestre 1, étant donné que vous n’avez pas encore les notes du S2, alors votre moyenne générale ne comprendra que celle du S1, mais divisée par 2. Pour connaître votre moyenne au S2, il faut donc multiplier ce nombre par deux.</p><p id="22a91944-7254-800a-b62c-f6a71ffbc212" class="">Si vous êtes redoublant·e, à la suite des examens du S1, vous serez toujours noté·e DEF (défaillant) ou AJ (ajourné). Cela est normal, car tant que les examens du S2 ne sont pas passés, les moyennes à l’année ne sont pas calculé. Les résultats définitifs seront affichés à la fin de l’année, donc en juin.</p><ul id="22a91944-7254-801d-8d2a-c8d5b5987e2b" class="toggle"><li><details open=""><summary><em><strong>J’ai des doutes ou questions sur mes notes, aimerais voir ma copie ou obtenir un retour </strong></em></summary><p id="22a91944-7254-80ee-8d93-e44b5c4a76bd" class="">Si vous avez des questions concernant vos notes, que votre note ne s’affiche pas alors que vous étiez bien présent·e à l’examen, que vous souhaitez voir votre copie ou obtenir un retour, merci de contacter uniquement les responsables d’UE concerné.e.s. Vos responsables d’UE, et uniquement eux, contacteront ensuite le secrétariat si besoin.</p></details></li></ul></details></li></ul><ul id="22a91944-7254-80d3-af46-f7bcfbb58ce4" class="toggle"><li><details open=""><summary><strong>Qu’est-ce que la compensation des notes ? </strong></summary><p id="22a91944-7254-8093-95f8-c7cdc8fea986" class="">Pour valider votre année, vous devez impérativement valider tous les BCC, c’est-à-dire, avoir une moyenne supérieur ou égal à 10/20 à chaque BCC. Il faut savoir que les UE de chaque BCC se compensent. Par exemple, pour le BCC2 au S1, si vous avez eu 18/20 en biologie, 03/20 en mathématiques et 10/20 en méthodologie, alors vous aurez 10,33/20 de moyenne à votre BCC donc vous validez votre BCC2. Les BCC similaires se compensent également entre chaque semestre. Par exemple, si au S1, vous avez au 10,33/20 au BCC2, et 9,67/20 au S2, alors vous aurez une moyenne générale de 10/20 à votre BCC2 sur l’ensemble de l’année. En revanche, si par exemple vous avez 10,64/20 de moyenne générale sur votre année (tous BCC compris), mais que vous avez eu 8,44/20 à votre BCC1 alors vous ne pouvez pas valider votre année et devez donc redoubler. Car cela veut dire que malgré les rattrapages et malgré la compensation, vous n’avez pas réussi à obtenir la moyenne. Il peut être injuste de redoubler pour seulement quelques matières, mais cela est le jeu et plusieurs possibilités de vous rattraper vous ont été offertes. Si vous êtes redoublant·e les BCC se compensent entre les deux années. Cette rectification se fera à la fin de votre deuxième année de Licence 1.</p></details></li></ul></details></li></ul><ul id="22991944-7254-80c2-b541-cc3740d054e1" class="toggle"><li><details open=""><summary><strong><span style="border-bottom:0.05em solid">De février à mai – les informations essentielles pour bien gérer son 2nd semestre</span></strong></summary><ul id="22a91944-7254-8099-a14d-c1836acd4692" class="toggle"><li><details open=""><summary><strong>Je dois (de nouveau) réaliser mes inscriptions pédagogiques. Pourquoi ?</strong></summary><p id="22a91944-7254-8075-8cc2-f57449978ed1" class="">Les inscriptions pédagogiques servent à vous inscrire aux examens. Pour la session 1 du S2 (examen du second semestre), les inscriptions pédagogiques (IP) ouvrent en mars / avril. Vous serez informé·e sur Moodle et/ou par mail par le secrétariat.</p><p id="22a91944-7254-8038-a04e-c2eed1a83be0" class="">Pour les étudiant·e·s redoublant·e, si vous avez déjà validé tout un semestre, alors vous ne passerez aucun examen pour ce dit semestre, il n’est donc pas nécessaire que vous réalisiez vos inscriptions pédagogiques pour des examens que vous n’allez pas passer.</p><p id="22a91944-7254-802a-a670-db921a4af1c0" class="">Pour les étudiant·e·s dispensés de certaines UE, vous devez malgré tout vous inscrire aux IP de ces UE. Les dispenses seront pris en compte plus tard.</p><p id="22a91944-7254-8045-b970-fa491cae87b4" class="">Si vous ne procédez pas entièrement à vos IP, vous n’aurez pas de note. Celles-ci de pourront pas remonter à votre dossier, même si vous avez bien réalisé vos examens. Vous devrez donc passer aux rattrapages. Ainsi, sans IP vous ne serez pas convoqué aux examens et n’aurez donc aucune information à ce sujet via votre ENT.</p></details></li></ul><ul id="22a91944-7254-80c8-82e5-f1059c6060a7" class="toggle"><li><details open=""><summary><strong>Qui sont les responsables des UE ?  </strong></summary><p id="22a91944-7254-80a2-b49a-c112d7079db0" class="">Les noms et adresse mail des responsables des UE sont disponibles sur le Moodle de la Licence 1. Il n’y a pas de responsable de BCC.  </p></details></li></ul><ul id="22a91944-7254-8034-9175-fe3f6e534be3" class="toggle"><li><details open=""><summary><strong>J’aimerais modifier mon emploi du temps</strong></summary><p id="22a91944-7254-8015-bcdb-cd62c1544f04" class="">Si vous êtes étudiant·e salarié·e, ou que vous habitez hors de la MEL (et avez recours à du co-voiturage), vous pouvez faire une demande de changement de groupe auprès de Madame Delacour-Petitjean avec vos justificatifs : soit un contrat de travail avec l’indication de vos horaires, soit une attestation de domicile. Attention, le changement de groupe n’inclus pas un emploi du temps à la carte, vous suivrez tous les enseignements du nouveau groupe de TD choisi. Vous pouvez également, lors du mois de septembre uniquement, demander à permuter avec le groupe d’un ou d’une autre étudiant·e. Dans ce cas, merci d’inclure vos deux noms dans le mail et de mettre le·la deuxième étudiant·e en copie du mail.</p></details></li></ul><ul id="22a91944-7254-802d-b514-ec2c786e675b" class="toggle"><li><details open=""><summary><strong>Je souhaite bénéficier d’un aménagement de mes études</strong></summary><ul id="22a91944-7254-80a1-b46d-d0b33ec8e9e8" class="toggle"><li><details open=""><summary><em><strong>Je suis salarié·e, étudiant·e-aidant·e, sportif de bon niveau, chargé·e de famille…</strong></em></summary><p id="22a91944-7254-8038-bb5e-d6b3eca99361" class="">Si vous avez une situation particulière (par exemple exemple : vous êtes salarié·e, chargé.e de famille, étudiant·e aidant·e, sportif de bon niveau etc.) vous pouvez solliciter un aménagement d’études. Il ne faut pas hésiter à le faire. Pour cela, vous devez vous rendre sur votre ENT, dans « Scolarité », puis « Aménager mes études », cliquer sur votre situation, télécharger et compléter le formulaire spécifique à votre situation. Ce formulaire est à renvoyer avec les pièces justificative à la responsable pédagogique de la Licence 1, Pauline Justin, à l’adresse mail : <a href="mailto:Responsable-pedagogique-L1@univ-lille.fr">Responsable-pedagogique-L1@univ-lille.fr</a>. Une fois le dossier validé, Mme Justin transmet votre demande à Mme Grosset-Janin, Chargée de l’accompagnement des étudiants et référente handicap.</p></details></li></ul><ul id="22a91944-7254-80c4-adfd-f343adc9db9f" class="toggle"><li><details open=""><summary><em><strong>Je suis en situation de handicap…</strong></em></summary><p id="22a91944-7254-8012-8d89-fab0cf39f6a9" class="">Si vous êtes en situation de handicap, n’hésitez pas à formuler une demande d’aménagements auprès du bureau de la vie étudiante et handicap (BVEH).</p><p id="22a91944-7254-80fb-a434-c195e9b1758f" class="">Pour tout accompagnement sur cette démarche, vous pouvez contacter Sarah Grosset-Janin à l’adresse suivante : <a href="mailto:accompagnement.etudiants@univ-lille.fr">accompagnement.etudiants@univ-lille.fr</a>, ou les deux référentes handicap enseignantes de notre département Maité Brunel et Gwendoline Mahé (<a href="mailto:maite.brunel@univ-lille.fr">maite.brunel@univ-lille.fr</a> ou <a href="mailto:gwendoline.mahe@univ-lille.fr">gwendoline.mahe@univ-lille.fr</a>)</p><p id="22a91944-7254-80f8-b759-d666f98617f5" class="">Une fois vos aménagements pour situation de handicap validés, ils sont valables l’année universitaire complète, vous devrez refaire une demande au début de chaque année universitaire.</p><p id="22a91944-7254-8065-b401-c9a8a5c9cf2a" class="">Toutes les informations relatives à cette procédure sont disponibles sur la page Moodle Accompagnement des étudiants <a href="https://moodle.univ-lille.fr/course/view.php?id=28512">https://moodle.univ-lille.fr/course/view.php?id=28512</a> (clé « Psychoaccomp ») et sur le site de l’université : <a href="https://ent.univ-lille.fr/etu/scolarite/etudes-et-handicap">https://ent.univ-lille.fr/etu/scolarite/etudes-et-handicap</a></p></details></li></ul><ul id="22a91944-7254-8087-9507-c02997f932c2" class="toggle"><li><details open=""><summary><em><strong>Je suis en situation de handicap de façon ponctuelle (exemple : bras ou jambe cassée)</strong></em></summary><p id="22a91944-7254-8002-a53f-d0ebef7ff977" class="">Pour toute demande d’aménagement provisoires (par exemple, si vous êtes en béquille et nécessitez de prendre l’ascenseur, si vous vous êtes cassé·e le poignet et ne pouvez plus écrire…), il vous faudra contacter directement le centre de santé des étudiants afin de prendre rendez-vous avec un médecin de l’université, qui vous fournira une proposition d’aménagement à transmettre au plus vite à Sarah Grosset-Janin. : <a href="https://www.univ-lille.fr/vie-des-campus/prendre-soin-de-sa-sante/centre-de-sante-etudiant">https://www.univ-lille.fr/vie-des-campus/prendre-soin-de-sa-sante/centre-de-sante-etudiant</a>.</p></details></li></ul></details></li></ul></details></li></ul><ul id="22991944-7254-80c6-a46b-e685fbb2538a" class="toggle"><li><details open=""><summary><strong><span style="border-bottom:0.05em solid">De mai à juin – Examen du 2nd semestre : rappel des informations du S1</span></strong></summary><ul id="22a91944-7254-8008-95b9-f56394f38500" class="toggle"><li><details open=""><summary><strong>Quand auront lieu les examens ?</strong></summary><p id="22a91944-7254-80ec-9a28-f0493070da4b" class="">Le calendrier universitaire, disponible sur Internet, sur le site de l’Université de Lille mais également sur le Moodle de la licence 1 vous indique les périodes des examens. Les examens du S2 se font en mai. Les rattrapages du S1 et du S2 se font en juin. Vous recevrez une convocation pour chacun des examens avec les horaires et le lieu. Avant cette convocation, il n’est pas possible de vous fournir les dates précises des examens, car elles ne sont pas encore à notre disposition. Nous-mêmes (responsable pédagogique et secrétariat), ne connaissons pas les dates).</p></details></li></ul><ul id="22a91944-7254-807d-a9d8-e82301dae0f8" class="toggle"><li><details open=""><summary><strong>Je suis convoqué·e aux examens</strong></summary><p id="22a91944-7254-80a3-870b-edbb221a2e33" class="">A l’approche des examens, vous serez convoqué·e·s à tous les examens, quelle que soit votre situation. Cette convocation se trouve sur votre ENT, dans la section « calendrier des examens ».</p><p id="22a91944-7254-8071-9643-e3ea55b6c3d4" class="">Même si vous êtes dispensé·e d’une UE, vous serez convoqué·e à l’ensemble des examens. Il est impératif d’avoir ces éléments en tête et de savoir à quel examen vous devez vous rendre, ou non.</p><p id="22a91944-7254-8002-88a4-cc60a75898dd" class="">Attention, pour les étudiant·e·s en situation de handicap qui composent en salle séparée, vous recevrez une convocation par mail du relais scolarité, merci de ne pas tenir compte des salles qui figurent sur votre ENT.</p></details></li></ul><ul id="22a91944-7254-802f-8ad1-d9c5b488363d" class="toggle"><li><details open=""><summary><strong>Comment justifier mon absence à un examen ? </strong></summary><p id="22a91944-7254-80b4-b936-de5196138372" class="">Si vous êtes absent·e a un examen, il vous faut absolument transmettre votre justificatif d’absence ou certificat médical au secrétariat dans les 72h qui suivent votre absence. C’est le seul cas où il vous faudra en fournir un. Il faut envoyer ses justificatifs d’absence au secrétariat de la L1 de psychologie : <a href="mailto:secretariat-psychologie-licence1@univ-lille.fr">secretariat-psychologie-licence1@univ-lille.fr</a> ET à votre responsable d’UE.   </p></details></li></ul><ul id="22a91944-7254-8061-8aee-eb35e217db4d" class="toggle"><li><details open=""><summary><strong>Je viens de recevoir mes résultats aux examens, comment les comprendre ?</strong></summary><p id="22a91944-7254-806a-af74-deb645e968ba" class="">Dans votre relevé de note (provisoire, du S1 ou S2), vous verrez apparaitre la moyenne aux BCC et aux UE de ces BCC, ainsi que le statut de chacun de ces éléments (ADM, AJ, DEF, ABI, ABJ, ADMC). Voici la définition des acronymes que vous pourrez voir :</p><ul id="22a91944-7254-80e5-ac1d-c9acfef2b7c4" class="bulleted-list"><li style="list-style-type:disc">ADM = Admis (l’UE, ou le BCC est validé)</li></ul><ul id="22a91944-7254-8001-953e-da364d2c7fb7" class="bulleted-list"><li style="list-style-type:disc">ADMC = Admis par compensation</li></ul><ul id="22a91944-7254-803e-8366-f718584d4126" class="bulleted-list"><li style="list-style-type:disc">AJ = Ajourné (l&#x27;UE, ou le BCC n’est pas validé)</li></ul><ul id="22a91944-7254-805c-9b54-fe5997af9bec" class="bulleted-list"><li style="list-style-type:disc">ABI = Absence Injustifiée</li></ul><ul id="22a91944-7254-8034-aef3-fc7f630c8bdd" class="bulleted-list"><li style="list-style-type:disc">ABJ = Absence Justifiée</li></ul><ul id="22a91944-7254-80aa-be47-e8940388bcb9" class="bulleted-list"><li style="list-style-type:disc">DEF = Défaillant (absence injustifiée au CC et/ou absence justifiée ou injustifiée au CT). Dans ce cas, le calcul des moyennes aux BCC est bloqué. Cependant, les UE validées resteront validées.</li></ul><ul id="22a91944-7254-803e-b139-d02eea36bfa3" class="bulleted-list"><li style="list-style-type:disc">PrC = Pris en Compte (lorsque l’UE a été validée une année antérieure, la note obtenue a été prise en compte, même si elle n’apparait pas dans le tableau)</li></ul><p id="22a91944-7254-802d-9cfb-f5365e079276" class="">Plusieurs rappels du règlement des études, qui sont important à prendre en compte :</p><p id="22a91944-7254-805b-bf4f-f1d221e83ea1" class="">1) Pour valider un semestre, vous devez valider chaque BCC du semestre.</p><p id="22a91944-7254-8090-92fd-e3b7c3d291fd" class="">2) Pour valider un BCC, il faut que la <span style="border-bottom:0.05em solid">moyenne</span> des notes des UE contenues dans ce BCC soit supérieure ou égale à 10 (les coefficients, correspondants aux ECTS, sont pris en compte).</p><p id="22a91944-7254-8045-ae07-d75ff66215db" class="">3) Lorsqu’un BCC est validé (moyenne au BCC supérieure ou égale à 10), toutes les UE qu’il contient sont validées (même si vous avez une note inférieure à 10 à une ou plusieurs UE au sein du BCC). Vous ne passez aucune UE au rattrapage pour un BCC validé, un BCC validé restera validé. Même si vous êtes insatisfait·e de votre note, vous ne pourrez pas aller aux rattrapages.</p><p id="22a91944-7254-80d3-97e5-f297d7e0d377" class="">4) Lorsqu’un BCC n’est pas validé (moyenne au BCC inférieure à 10), mais qu’une UE dans ce BCC est validée, vous ne repassez pas tout le BCC, uniquement les UE non validées au sein du BCC non validé. Une UE validée reste validée.</p><p id="22a91944-7254-8032-b357-ede3839dae8d" class="">5) Il existe une compensation entre les BCC entre le semestre 1 et le semestre 2. C’est à dire que vous pourrez, par compensation, valider un BCC dont la moyenne est inférieure à 10 au S1, en validant ce même BCC (n°1, 2, 3 ou 4) au S2 avec une moyenne suffisamment bonne pour qu’ensemble les deux BCC aient une moyenne supérieure à 10.</p><p id="22a91944-7254-8065-99bd-d0352fa79e27" class="">6) Pour celles et ceux qui auront besoin de rattraper des UE/BCC, l’inscription en session 2 (rattrapages) sera automatique, vous n’aurez rien d’autre à faire que de vous présenter aux examens de rattrapage en juin prochain. Toutes ces informations s’afficheront sur votre ENT quelques semaines avant la période des rattrapages.</p><p id="22a91944-7254-80f2-a664-e57c41d36e0d" class="">7) Le jury n’accorde pas de point de jury en session 1, inutile donc de faire des demandes en ce sens.</p><p id="22a91944-7254-8086-b20e-fa1f2a039314" class="">8) Les résultats définitifs seront disponibles via l&#x27;ENT après le jury de régulation à la fin du mois de février pour le S1, mai pour le S2, et début juillet pour la session de rattrapage.</p><p id="22a91944-7254-8074-af70-faefda197807" class="">A l’issu du S1, vous verrez que votre moyenne générale sur l’année sera inférieure à 10/20. Cela est normal. Celle-ci est divisée en 2 étant donné que la moyenne générale de l’année est composée de celle du S1 et du S2. A la fin du Semestre 1, étant donné que vous n’avez pas encore les notes du S2, alors votre moyenne générale ne comprendra que celle du S1, mais divisée par 2. Pour connaître votre moyenne au S2, il faut donc multiplier ce nombre par deux.</p><p id="22a91944-7254-805d-93ab-d466ee6460a7" class="">Si vous êtes redoublant·e, à la suite des examens du S1, vous serez toujours noté·e DEF (défaillant) ou AJ (ajourné). Cela est normal, car tant que les examens du S2 ne sont pas passés, les moyennes à l’année ne sont pas calculé. Les résultats définitifs seront affichés à la fin de l’année, donc en juin.</p><ul id="22a91944-7254-80dc-831a-c72aed37824a" class="toggle"><li><details open=""><summary><em><strong>J’ai des doutes ou questions sur mes notes, aimerais voir ma copie ou obtenir un retour </strong></em></summary><p id="22a91944-7254-800d-9e95-eeaf883e252e" class="">Si vous avez des questions concernant vos notes, que votre note ne s’affiche pas alors que vous étiez bien présent·e à l’examen, que vous souhaitez voir votre copie ou obtenir un retour, merci de contacter uniquement les responsables d’UE concerné.e.s. Vos responsables d’UE, et uniquement eux, contacteront ensuite le secrétariat si besoin.</p></details></li></ul></details></li></ul><ul id="22a91944-7254-8070-bd03-ceeb74b79a47" class="toggle"><li><details open=""><summary><strong>Qu’est-ce que la compensation des notes ? </strong>   </summary><p id="22a91944-7254-8043-b994-d8b65f7567c5" class="">Pour valider votre année, vous devez impérativement valider tous les BCC, c’est-à-dire, avoir une moyenne supérieur ou égal à 10/20 à chaque BCC. Il faut savoir que les UE de chaque BCC se compensent. Par exemple, pour le BCC2 au S1, si vous avez eu 18/20 en biologie, 03/20 en mathématiques et 10/20 en méthodologie, alors vous aurez 10,33/20 de moyenne à votre BCC donc vous validez votre BCC2. Les BCC similaires se compensent également entre chaque semestre. Par exemple, si au S1, vous avez au 10,33/20 au BCC2, et 9,67/20 au S2, alors vous aurez une moyenne générale de 10/20 à votre BCC2 sur l’ensemble de l’année. En revanche, si par exemple vous avez 10,64/20 de moyenne générale sur votre année (tous BCC compris), mais que vous avez eu 8,44/20 à votre BCC1 alors vous ne pouvez pas valider votre année et devez donc redoubler. Car cela veut dire que malgré les rattrapages et malgré la compensation, vous n’avez pas réussi à obtenir la moyenne. Il peut être injuste de redoubler pour seulement quelques matières, mais cela est le jeu et plusieurs possibilités de vous rattraper vous ont été offertes. Si vous êtes redoublant·e les BCC se compensent entre les deux années. Cette rectification se fera à la fin de votre deuxième année de Licence 1.</p></details></li></ul></details></li></ul><ul id="22991944-7254-807a-afc4-de2a87d2a8cc" class="toggle"><li><details open=""><summary><strong><span style="border-bottom:0.05em solid">De juin à juillet – Rattrapages et fin d’année</span></strong>   </summary><ul id="22a91944-7254-80d4-9524-d342e8290702" class="toggle"><li><details open=""><summary><strong>Je suis convoqué·e pour les rattrapages…</strong></summary><p id="22a91944-7254-8077-b5f2-e27492461755" class="">Les convocations pour les rattrapages sont envoyées automatiquement à <span style="border-bottom:0.05em solid">tous</span> les étudiant·e·s avant même l’obtention des résultats. Cela ne veut pas dire que vous n’avez pas validé vos UE ou BCC. <span style="border-bottom:0.05em solid">Cela est automatique</span>. Il faut attendre d’avoir vos résultats pour savoir si vous devez vous y présenter ou non. Si vous avez eu plus de 10/20 à vos BCCs (ADM), ou si vous validez grâce à la compensation (ADMC), alors vous n’avez pas besoin de vous rendre aux rattrapages.</p></details></li></ul><ul id="22a91944-7254-808e-a011-fa6d4f73d242" class="toggle"><li><details open=""><summary><strong>Que dois-je savoir avant d’aller aux rattrapages ?</strong></summary><p id="22a91944-7254-8036-9d9e-ccbbc8ca9ffd" class="">Les rattrapages ont lieu en juin. Ils débutent par ceux du Semestre 1 puis ceux du Semestre 2. Vous retrouverez les périodes d’examen sur le calendrier universitaire quelques semaines avant.</p><ul id="22a91944-7254-809c-b67d-f752b832d479" class="bulleted-list"><li style="list-style-type:disc">Si un BCC est validé (par compensation notamment) il le reste, inutile d&#x27;aller aux rattrapages pour celui-ci, même si une UE dans ce BCC est inférieure à 10.</li></ul><ul id="22a91944-7254-8018-87f2-f65788d49ad0" class="bulleted-list"><li style="list-style-type:disc">Si une UE est validée, elle le reste et ne peut pas être repassée en session de rattrapages, même si vous êtes insatisfait·e de votre note, il n’est pas possible de l’améliorer aux rattrapages.</li></ul><ul id="22a91944-7254-8027-85e5-fec383063762" class="bulleted-list"><li style="list-style-type:disc">Les rattrapages sont obligatoires et ne sont pas à la carte. Si vous n’avez pas validé certains BCC et devez rattraper des matières, alors vous devez vous rendre aux rattrapages. Si vous ne le faites pas, vous serez noté.e « défaillant.e » et prenez le risque de redoubler.</li></ul><ul id="22a91944-7254-806d-a7a9-f1ae9c37823e" class="bulleted-list"><li style="list-style-type:disc">La compensation au sein des BCC et entre BCC s’appliquera après les deux sessions de rattrapages. Ainsi, si vous êtes convoqué·e aux deux sessions, vous devez y aller.</li></ul><ul id="22a91944-7254-80dd-9d0d-ddef0aa53cff" class="bulleted-list"><li style="list-style-type:disc">Les notes de session 2 viendront obligatoirement remplacer les notes de session 1, et ce, même si vous avez eu une moins bonne note aux rattrapages. Nous ne prenons PAS la meilleure note.</li></ul><ul id="22a91944-7254-8063-8267-c90e0acacaa9" class="bulleted-list"><li style="list-style-type:disc">Si vos notes des rattrapages sont supérieurs à 10/20, alors vous validez vos UE et BCC et pouvez passer en deuxième année. Les résultats finaux seront disponibles en juillet.</li></ul></details></li></ul><ul id="22a91944-7254-80b4-b51b-cc785f8e28e7" class="toggle"><li><details open=""><summary><strong>Le jury peut-il m’accorder des points bonus ?</strong></summary><p id="22a91944-7254-8018-bd72-e2793b35c579" class="">Si à l’issu de vos résultats du S1 ou du S2 (en première session) vous n’avez pas validé certaines de vos UE, il faudra vous rendre aux examens de rattrapage. Aucun point du jury ne pourra vous être accordé avant les rattrapages. Le jury est le seul décisionnaire de l’attribution de points de jury. Il est inutile de faire de demande en ce sens, car ils ne seront pas pris en compte.</p></details></li></ul><ul id="22a91944-7254-800a-8abd-e99fb0866489" class="toggle"><li><details open=""><summary><strong>Puis-je enjamber en Licence 2 de Psychologie ?</strong></summary><p id="22a91944-7254-80e0-9629-c6e1d9ace3a9" class="">L’enjambement est le fait d’être autorisé·e à passer dans l’année supérieure (ici en Licence 2 de Psychologie), tout en rattrapant les matières que vous n’auriez pas validé durant votre L1.</p><p id="22a91944-7254-80d0-8212-d793deebfd96" class="">Cet enjambement est possible, mais dépend d’un certain nombre de critère, en fonction du dossier de l’étudiant·e, notamment le nombre et le type d’UE non validées, s’il s’agit de matière fondamentale ou non, si l’étudiant·e est en LAS1 ou en Psychologie, s’il y a eu compensation entre les matières ou non.</p><p id="22a91944-7254-80f8-8e1e-cc54ea592543" class="">Le jury est le seul décisionnaire de l’enjambement d’un·e étudiant·e. Il est inutile de faire des demandes en ce sens, car elles ne seront pas prises en compte.</p><p id="22a91944-7254-8093-8dfa-c130f45439df" class="">La décision d’enjambement (AJAC) est prise lors du jury de fin d’année ayant lieu en juillet. Après la décision du jury prise, il n’est plus possible de revenir en arrière. Si l’enjambement n’est pas autorisé, alors vous devrez redoubler, même pour une seule matière.</p><p id="22a91944-7254-8003-8ff7-ef2055d3539d" class="">Bien que légalement autorisé, l’enjambement reste fortement déconseillé pour le bien-être des étudiant·e·s. En effet, bien que vous soyez accepté en L2, vous devrez rattraper des matières assez lourdes avec un certain retard car vous avez rencontré des difficultés durant votre première année (L1), ainsi, vous aurez du retard au niveau de votre compréhension car vous ne maîtriserez pas le socle de connaissances de la L1 pour les enseignements de la L2, et prenez donc le risque de ne pas valider des matières de L2 à cause de cela.</p><p id="22a91944-7254-80c6-8ba1-c3b28fa97863" class="">Par ailleurs, le règlement des études n’autorise pas les étudiant·e·s à passer les examens de L2 de la matière qu’ils·elles n’ont pas validé en L1. Par conséquent, vous devrez de nouveau enjamber en L3 pour rattraper ces matières de L2 et ainsi de suite. Ainsi, vous devrez dans tous les cas, redoubler à un moment ou l’autre de votre cursus. Pour votre bien-être, il est préférable de redoubler en première année, plutôt qu’en L2 ou L3. Cette décision peut être difficile à comprendre et perçue comme injuste, mais est souvent préférable.</p></details></li></ul><ul id="22a91944-7254-8064-a08f-c6a4203aeb3b" class="toggle"><li><details open=""><summary><strong>Quelles sont les conditions d’autorisation à redoubler (ou tripler) ?</strong></summary><p id="22a91944-7254-80e3-8729-f685b669e212" class="">Le règlement des études stipule que : « <em>L’étudiant·e est autorisé·e à doubler une première fois dans une année de formation donnée s&#x27;il a validé au moins un BCC dans son année d’inscription. Dans tout autre cas, l’autorisation de doublement est soumise à la décision du jury</em> ».</p><p id="22a91944-7254-8072-9495-c1ca35165c0a" class="">Par conséquent, si l’étudiant·e n’a validé aucun BCC alors il n’est pas autorisée à redoubler. Dans les autres cas, le redoublement est soumis à la décision du jury qui a lieu en juillet, et n’est pas systématique. Passé ce jury, il n’est plus possible de revenir en arrière, et aucun traitement de faveur ne sera accordé, sauf cas exceptionnel, dont la responsable pédagogique et le jury doivent être informé·e·s avant le jury et la décision.</p></details></li></ul><ul id="22a91944-7254-8024-8580-fc67cb68d875" class="toggle"><li><details open=""><summary><strong>Je redouble ma L1, que dois-je savoir ?</strong>   </summary><p id="22a91944-7254-8047-8f8d-f5cc094fbbef" class="">Si vous redoublez votre L1, alors seules les matières des BCC non validées devront être repassées la seconde année de L1, c’est-à-dire toutes les matières (UE) pour lesquelles vous n’avez pas eu la moyenne, c’est-à-dire en dessous de 10/20.</p><p id="22a91944-7254-8076-9425-d8527e185b3d" class="">Si vous étiez dispensé·e de certains matières, par exemple l’UEPE, les langues ou autre, vous devez refaire une demande de dispense, car elles ne sont pas automatiquement transférées.</p></details></li></ul><ul id="22a91944-7254-80ef-9353-f4ee2ae3a9e2" class="toggle"><li><details open=""><summary><strong>J’ai validé mon année, je souhaite m’inscrire en L2</strong></summary><p id="22a91944-7254-8070-adef-fbb44e83add2" class="">Pour pouvoir vous inscrire administrativement en Licence 2, il vous faut attendre les résultats définitifs de votre année. Sans ces documents, la plateforme ne vous autorisera pas à vous inscrire, et il sera indiqué qu’aucune inscription ne vous est permis pour le moment. Si vous avez validé votre année en Session 1, alors vous aurez courant mai / juin votre relevé de note définitif et officiel. Si vous passez en Session 2 (rattrapages), alors vous pourrez demander votre relevé de notes définitif au secrétariat, qui pourra vous le délivrer à la mi-juillet. La responsable pédagogique et le secrétariat n’ont malheureusement pas la main sur ces documents et sont tributaires des délais administratifs de l’Université et des plateformes.</p></details></li></ul><ul id="22a91944-7254-8021-9e95-eab323816f11" class="toggle"><li><details open=""><summary><strong>Je suis en LAS1 et je souhaite arrêter l’option santé pour redoubler en L1 de Psychologie</strong></summary><p id="22a91944-7254-8080-a801-d0bd0bc17bcb" class="">Si vous êtes en LAS1, que vous souhaitez arrêter l’option santé et n’avez pas validé toutes vos UE en Psychologie, alors vous devrez redoubler votre année et avez la possibilité intégrer une Licence 1 « classique ».</p><p id="22a91944-7254-8065-8862-f48b02f0039b" class="">Attention toutefois : dans cette situation vous devrez cette fois-ci passer toutes les UE de Psychologie, dont certaines ne sont pas dans le parcours LAS.  Une attention toute particulière est requise pour le BCC2 : si vous aviez validé ce BCC par compensation, sachez que cette compensation n’est plus effective. En effet, en LAS1, vous étiez dispensé, par votre formation en santé de l’UE biologie. Toutefois, en L1 Psychologie « classique », vous devrez passer cette UE. Si les autres matières du BCC2 (statistiques et méthodologies) avaient été validé par compensation, vous devrez de nouveau les passer.</p></details></li></ul><ul id="22a91944-7254-80a4-a4d2-fd2a4ee36b82" class="toggle"><li><details open=""><summary><strong>Je suis en L1 Psychologie et souhaite intégrer une LAS 2</strong></summary><p id="22a91944-7254-8019-b2e9-c4f5a12e3e90" class="">Si vous avez effectué une première année de Licence 1 de Psychologie (parcours classique), et que vous souhaitez intégrer une LAS2, vous devrez candidater sur la plateforme Ecandidat. Attention, lors de cette année de LAS2, vous devrez repasser les cours de médecine de LAS1 qui n’ont pas été vus (vous aurez donc ce que l’on appelle des « DETTES »).</p></details></li></ul><ul id="22a91944-7254-80f6-a20c-e3bc5a6fcfa0" class="toggle"><li><details open=""><summary><strong>Comment obtenir mon relevé de note ?</strong></summary><p id="22a91944-7254-80f0-97f7-ec45b2ed80bb" class="">Pour toute demande en lien avec les relevés de note, vous devez envoyer un mail a l’adresse : <a href="mailto:secretariat-psychologie-licence1@univ-lille.fr">secretariat-psychologie-licence1@univ-lille.fr</a>. Veuillez préciser votre nom, numéro étudiant et session(s) demandée(s). Les relevés de notes ne sont délivrés qu’à l’issue de l’année universitaire, en juillet.</p></details></li></ul><ul id="22a91944-7254-8054-90cd-feabe173e30e" class="toggle"><li><details open=""><summary><strong>Comment obtenir un certificat de scolarité ou une attestation ?</strong></summary><p id="22a91944-7254-8066-a491-fa4869999dbe" class="">Dans certains cas, vous pouvez avoir besoin d’une attestation d’inscription, parfois, cela est nécessaire pour des demandes de VISA ou de titre de séjour, ou d’accès à la bourse du CROUS.</p><p id="22a91944-7254-809c-bb4e-c8fd8912cb4a" class="">Plusieurs solutions possibles :</p><p id="22a91944-7254-807f-80f9-cacbc9200ab5" class="">Pour les étudiants étrangers en attente de titre de séjour ou de VISA : la responsable de la Licence 1, Mme Justin, peut rédiger un courrier d’acceptation, si vous lui adressez les coordonnées exactes de la personne à qui remettre l’attestation.</p><p id="22a91944-7254-8020-9dce-de9fe65d6717" class="">Pour les autres : l’attestation Parcoursup peut servir de justificatif. L’attestation d’inscription sera délivrée par la scolarité lorsque vous aurez réglé vos frais d’inscription, et sera disponible dans la section « Certificat de scolarité » sur votre ENT.</p></details></li></ul><ul id="22a91944-7254-8004-a0b5-efc7055b7995" class="toggle"><li><details open=""><summary><strong>Je souhaite changer d’université, comment faire un transfert de dossier ?</strong></summary><p id="22a91944-7254-80a7-8b48-d8784b40d30e" class="">Si à l’issu de votre première année de Licence, vous souhaitez changer d’université (que ce soit au sein d’une autre université française, publique ou privée ou bien à l’étranger), et qu’un transfert de dossier est nécessaire, il vous faut voir ces démarches administratives avec le pôle scolarité de l’Université de Lille :<a href="mailto:scolarite-relais-pontdebois@univ-lille.fr">scolarite-relais-pontdebois@univ-lille.fr</a> . Les relevés de notes sont en revanche à demander au secrétariat : <a href="mailto:secretariat-psychologie-licence1@univ-lille.fr">secretariat-psychologie-licence1@univ-lille.fr</a>.</p></details></li></ul></details></li></ul><ul id="22991944-7254-80c2-a1ea-d6c47be0f351" class="toggle"><li><details open=""><summary><strong><span style="border-bottom:0.05em solid">Les autres questions que vous pourriez vous poser</span></strong></summary><ul id="22a91944-7254-80f6-99a5-c7543cdc6bee" class="toggle"><li><details open=""><summary><strong>Courtoisie et savoir-vivre</strong>   </summary><p id="22a91944-7254-80ac-8492-d5c9379bc69d" class="">Les membres du personnel de l’université (enseignant·e·s, personnels administratifs, logistiques, etc.) ne sont pas vos ami·e·s, mais des professionnel·le·s avec lesquel·le·s vous êtes tenu·e·s d’entretenir des échanges respectueux.</p><p id="22a91944-7254-8063-b74c-c5680d9a5f29" class="">Nous vous demandons donc de soigner la forme et le ton de vos communications, que ce soit par mail, en personne ou par tout autre moyen, et quelque soit la période de l’année (surtout en période stressante d’examen).<br/>Tout comportement déplacé ou tout manque de courtoisie pourra faire l’objet de sanctions.<br/></p></details></li></ul><ul id="22a91944-7254-803f-9476-c8a585cbecc7" class="toggle"><li><details open=""><summary><strong>Comment changer de nom ou de prénom ?</strong></summary><p id="22a91944-7254-8008-b494-d28de69a4047" class="">Pour toute demande en lien avec des changements de nom, prénom ou pronom, vous devez vous rendre dans la boite à outils de votre ENT où figure le formulaire dédié.</p></details></li></ul><ul id="22a91944-7254-80a8-b7d6-f40b8c62c549" class="toggle"><li><details open=""><summary><strong>J’aimerais faire un stage, comment faire ?</strong>   </summary><p id="22a91944-7254-804a-a041-caf5cd8956d5" class="">L’Université de Lille n’autorise pas la réalisation de stage en Licence 1 et en Licence 2. Elle ne pourra donc pas délivrer de convention de stage aux étudiant·e·s, ni valider des stages qui auraient été réalisé d’une autre manière. Si vous voulez vous familiariser avec le terrain ou une population spécifique, vous pouvez le faire via un service civique ou du bénévolat. Il est toutefois important de réaliser ces démarches et initiatives de façon sérieuse et sur le long terme, dans le respect des associations et institutions.</p></details></li></ul><ul id="22a91944-7254-80df-9417-f89483c7cd3f" class="toggle"><li><details open=""><summary><strong>Je souhaite partir à l’étranger pendant mes études</strong></summary><p id="22a91944-7254-8088-bb3e-ca72ec427233" class="">Si vous souhaitez partir à l’étranger durant votre Licence, cela est possible. Une réunion concernant les mobilités aura lieu durant l’année, et nous vous communiquerons la date ultérieurement dès que nous les auront.</p><p id="22a91944-7254-8067-abb2-fde1c4faf4b8" class="">Si vous souhaitez partir durant votre Licence 2, alors vous devez demander la mobilité au cours de votre année de licence 1. Ces projets s’anticipent.</p></details></li></ul><ul id="22a91944-7254-8051-bebf-ddfb856ecd2e" class="toggle"><li><details open=""><summary><strong>Je souhaite m’informer sur les accompagnements possibles pour les étudiant·e·s</strong>   </summary><p id="22a91944-7254-80d4-a6cc-cda9f9de24aa" class="">Dès le début du premier semestre, veuillez-vous inscrire sur la page Moodle intitulée <strong>« Accompagnement des étudiants – Département de psychologie », </strong>à l’aide de la clé d’inscription<strong> « Psychoaccomp »</strong> : <a href="https://moodle.univ-lille.fr/course/view.php?id=28512">https://moodle.univ-lille.fr/course/view.php?id=28512</a></p><p id="22a91944-7254-8027-abfa-f4a5420db0ca" class="">Cette page a pour objectif de vous accompagner dans vos démarches liées aux aménagements pour raisons de handicap ou statuts spécifiques (salariés, étudiants aidants, double cursus, sportifs…). Vous y trouverez également les procédures à suivre pour les demandes de césure ainsi que pour la mise en place d’un <strong>contrat pédagogique de réussite</strong>.</p><p id="22a91944-7254-8043-b442-eb698b2f5ad0" class="">Vous accéderez également aux <strong>guides d’études </strong>et aux<strong> plaquettes de formation </strong>du<strong> </strong>département.</p><p id="22a91944-7254-800f-9e27-fae3f87a1bac" class="">Un <strong>panneau d’affichage</strong> virtuel est à votre disposition, regroupant diverses informations utiles pour favoriser votre bien-être à l’université et en tant qu’étudiant. Des ressources sur la <strong>santé mentale </strong>et les aides existantes pour les étudiants y sont également présentées.</p><p id="22a91944-7254-80d6-9d4d-d2719c42803f" class="">Enfin, la page recense toutes les <strong>offres de jobs étudiants </strong>proposées par le BVEH, notamment pour accompagner vos camarades en situation de handicap (prise de notes, assistants de vie d’études, etc.).</p></details></li></ul><ul id="22a91944-7254-8074-886f-e3fe530ccc18" class="toggle"><li><details open=""><summary><strong>Pour toutes autres questions générales, retrouvez la FAQ de l’Université</strong></summary><p id="22a91944-7254-806b-9cfd-dd07a172d2e6" class="">L’Université a également conçue une FAQ pour répondre à toutes les questions que vous pourriez vous poser, en dehors de la Psychologie : <a href="https://ent.univ-lille.fr/espaces-thematiques/reponses-aux-etudiantes/scolarite">https://ent.univ-lille.fr/espaces-thematiques/reponses-aux-etudiantes/scolarite</a></p></details></li></ul></details></li></ul></div></details><p id="23191944-7254-8011-a813-c348ca1f77fb" class="">
 </p><p id="23191944-7254-80cb-8bae-d303532bfd48" class="">
-</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll("details").forEach((el) => {
-      el.removeAttribute("open"); // Force le repli
-    });
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span><script>
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.querySelector('.page-body');
+  if (!root) return;
+  const allDetails = Array.from(root.querySelectorAll('details'));
+
+  allDetails.forEach(d => { d.open = (d.parentElement === root); });
+
+  const periodDetails = allDetails.filter(d => {
+    const summary = d.querySelector(':scope > summary');
+    return summary && summary.querySelector('span[style*="border-bottom"]');
   });
+
+  const questionDetails = allDetails.filter(d => !periodDetails.includes(d) && d.parentElement !== root);
+
+  const nav = document.getElementById('faq-nav-links');
+  periodDetails.forEach((d, i) => {
+    const id = 'periode-' + (i + 1);
+    d.id = id;
+    const summaryEl = d.querySelector(':scope > summary');
+    const label = summaryEl ? summaryEl.textContent.trim() : ('Section ' + (i + 1));
+    const a = document.createElement('a');
+    a.href = '#' + id;
+    a.className = 'faq-nav-pill';
+    a.title = label;
+    a.textContent = label.length > 42 ? label.slice(0, 42) + '…' : label;
+    a.addEventListener('click', (e) => {
+      e.preventDefault();
+      d.open = true;
+      history.replaceState(null, '', '#' + id);
+      d.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    nav.appendChild(a);
+  });
+
+  function normalize(s) {
+    return s.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase();
+  }
+
+  const searchInput = document.getElementById('faq-search');
+  const searchCount = document.getElementById('faq-search-count');
+  const clearBtn = document.getElementById('faq-search-clear');
+  const emptyState = document.getElementById('faq-empty-state');
+
+  function resetView() {
+    questionDetails.forEach(d => {
+      d.open = false;
+      const li = d.closest('li');
+      if (li) li.classList.remove('faq-li-hidden');
+    });
+    periodDetails.forEach(d => {
+      d.open = false;
+      const li = d.closest('li');
+      if (li) li.classList.remove('faq-li-hidden');
+    });
+    searchCount.textContent = '';
+    clearBtn.classList.remove('visible');
+    emptyState.classList.remove('visible');
+  }
+
+  searchInput.addEventListener('input', () => {
+    const raw = searchInput.value.trim();
+    clearBtn.classList.toggle('visible', raw.length > 0);
+    if (!raw) { resetView(); return; }
+    const q = normalize(raw);
+    let matches = 0;
+    questionDetails.forEach(d => {
+      const isMatch = normalize(d.textContent).includes(q);
+      const li = d.closest('li');
+      if (li) li.classList.toggle('faq-li-hidden', !isMatch);
+      d.open = isMatch;
+      if (isMatch) matches++;
+    });
+    periodDetails.forEach(d => {
+      const hasVisibleMatch = Array.from(d.querySelectorAll(':scope ul.toggle > li')).some(li => !li.classList.contains('faq-li-hidden'));
+      const li = d.closest('li');
+      if (li) li.classList.toggle('faq-li-hidden', !hasVisibleMatch);
+      d.open = hasVisibleMatch;
+    });
+    searchCount.textContent = matches === 0 ? '' : (matches + (matches > 1 ? ' résultats' : ' résultat'));
+    emptyState.classList.toggle('visible', matches === 0);
+  });
+
+  clearBtn.addEventListener('click', () => {
+    searchInput.value = '';
+    resetView();
+    searchInput.focus();
+  });
+
+  document.getElementById('faq-expand-all').addEventListener('click', () => {
+    allDetails.forEach(d => { d.open = true; });
+  });
+  document.getElementById('faq-collapse-all').addEventListener('click', () => {
+    allDetails.forEach(d => { d.open = (d.parentElement === root); });
+  });
+
+  const toTop = document.getElementById('faq-to-top');
+  window.addEventListener('scroll', () => {
+    toTop.classList.toggle('visible', window.scrollY > 400);
+  }, { passive: true });
+  toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+});
 </script>
+<button id="faq-to-top" type="button" aria-label="Revenir en haut">↑</button>
+</body></html>
